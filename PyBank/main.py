@@ -39,6 +39,18 @@ for row in csvreader:
 
 average_changes = total_changes / (number_of_rows-1)
 
+# Closing CSV file
+csvfile.close()
+
+with open('./analysis/results.txt', 'w') as f:
+    f.write ("Financial Analysis\n")
+    f.write ("----------------------------\n")
+    f.write ("Total Months: " + str(number_of_rows) + "\n")
+    f.write ("Total: $" + str(total_profit_loss) + "\n")
+    f.write ("Average Change: $" + str(round(average_changes,2)) + "\n")
+    f.write ("Greatest Increase in Profits: " + greatest_increase[0] + " ($" + str(greatest_increase[1]) + ")\n")
+    f.write ("Greatest Decrease in Profits: " + greatest_decrease[0] + " ($" + str(greatest_decrease[1]) + ")")
+
 print ("Financial Analysis")
 print ("----------------------------")
 print ("Total Months: " + str(number_of_rows))
