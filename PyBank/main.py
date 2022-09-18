@@ -53,6 +53,7 @@ with open('./analysis/results.txt', 'w') as f:
     f.write ("Average Change: $" + str(round(average_changes,2)) + "\n")
     f.write ("Greatest Increase in Profits: " + greatest_increase[0] + " ($" + str(greatest_increase[1]) + ")\n")
     f.write ("Greatest Decrease in Profits: " + greatest_decrease[0] + " ($" + str(greatest_decrease[1]) + ")")
+    f.close()
 
 # Printing the report in the screen
 print ("Financial Analysis")
