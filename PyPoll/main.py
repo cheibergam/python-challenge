@@ -40,7 +40,6 @@ winner = candidates[index_winner]           # String with the name of the Winner
 
 # Initialising the variables to prepare the report and identify the winner
 result_string = []
-winner_key = ""
 
 # Preparing the result string for the election report
 for key in poll_report_dict:
